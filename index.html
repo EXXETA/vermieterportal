@@ -50,18 +50,27 @@
   <body>
     <div class="container-fluid">
 
-      <div class="row py-3 px-2 fixed-top" style="background-color: #ffffff">
-        <div class="col d-flex justify-content-between align-items-center">
-          <div class="d-flex justify-content-around align-items-center">
-            <i class="far fa-building fa-2x pr-2"></i>
-            <a href="index.html" id="title">Vermieterix</a>
-          </div>
-          <div>
-            <a href="#funktionen" role="button" class="btn btn-md" style="background-color: #152877; color: #ffffff">Funktionen</a>
-            <a href="#pricing" role="button" class="btn btn-md" style="background-color: #152877; color: #ffffff">Preise</a>
-          </div>
+      <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
+        <div class="navbar-brand" href="#">
+          <i class="far fa-building fa-2x pr-2"></i>
+          <a href="index.html" id="title">Vermieterix</a>
         </div>
-      </div>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item pt-2 pt-md-0 pr-2">
+              <a href="#funktionen" role="button" class="btn btn-md" style="background-color: #152877; color: #ffffff">Funktionen</a>
+            </li>
+            <li class="nav-item py-2 pt-md-0">
+              <a href="#pricing" role="button" class="btn btn-md" style="background-color: #152877; color: #ffffff">Preise</a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
 
       <div class="row" style="height: 4rem"></div>
 
@@ -84,7 +93,7 @@
       <div>
 
       <div class="row pt-4 pb-2">
-        <div class="col-10 pt-4 order-last pt-md-0 order-md-first col-md-3 offset-2 d-flex justify-content-center align-items-center">
+        <div class="col-10 pt-4 offset-1 order-last pt-md-0 order-md-first col-md-3 d-flex justify-content-center align-items-center">
           <h3 class="text-center d-none d-md-block">Mit dem Dashboard behalten Sie den Überblick</h3>
           <h4 class="text-center d-md-none">Mit dem Dashboard behalten Sie den Überblick</h4>
         </div>
