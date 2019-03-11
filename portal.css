@@ -3,6 +3,14 @@ body {
      color: #152877;
 }
 
+.carousel-caption {
+    max-width: 100%;
+    width:100%;
+    height: 100%;
+    left: 0;
+    background: rgba(246, 246, 246, 0.5);
+}
+
 #title {
     font-size: 140%;
     font-weight: bold;
