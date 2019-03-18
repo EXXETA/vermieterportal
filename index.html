@@ -17,7 +17,7 @@
       window[disableStr] = true;
     }
     </script>
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135670334-1"></script>
     <script>
@@ -26,6 +26,7 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-135670334-1', {'anonymize_ip': true});
+      gtag('config', 'AW-756223310');
     </script>
 
     <!-- Required meta tags -->
@@ -276,7 +277,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    <script type="text/javascript">         
+    <script type="text/javascript">
+      
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', { 'send_to': 'AW-756223310/eDWKCPmw-5YBEM6azOgC', 'event_callback': callback });
+        return false;
+      }
+
       $(document).ready(function() {
 
         // Set the prices with a 50/50 chance fot both sets
@@ -295,6 +307,8 @@
         }
 
         $('.anmelden').on('click', function(event) {
+          gtag_report_conversion('https://vermieterix.com/vportal-anmelden.html');
+
           var formData = {
             'site_id': 'website',
             'price': $(event.target).data('price').toString(),
