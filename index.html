@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script type="text/javascript">
+      if (document.cookie.indexOf("sessiontag=") >= 0) {
+        console.log('Hi again.');
+      } else {
+        console.log('Creating sessiontag');
+        document.cookie="sessiontag=" + Math.trunc(Math.random() * 10000000) + "; expires=1";
+      }
+    </script>
+
     <script>
     // Set to the same value as the web property used on the site
     var gaProperty = 'UA-135670334-1';
@@ -311,9 +320,10 @@
           gtag_report_conversion('https://vermieterix.com/vportal-anmelden.html');
 
           var formData = {
-            'site_id': 'website',
+            'site_id': 'website-v0.2',
             'price': $(event.target).data('price').toString(),
-            'option': option
+            'option': option,
+            'cookie': document.cookie
           };
           
           console.log(formData);
