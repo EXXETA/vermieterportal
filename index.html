@@ -1,354 +1,262 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <script type="text/javascript">
-      if (document.cookie.indexOf("sessiontag=") >= 0) {
-        console.log('Hi again.');
-      } else {
-        console.log('Creating sessiontag');
-        document.cookie="sessiontag=" + Math.trunc(Math.random() * 10000000) + "; expires=1";
-      }
-    </script>
+---
+layout: default
+---
+<body>
+  <div class="container-fluid">
 
-    <script>
-    // Set to the same value as the web property used on the site
-    var gaProperty = 'UA-135670334-1';
+    {% include _navbar.html %}
 
-    // Disable tracking if the opt-out cookie exists.
-    var disableStr = 'ga-disable-' + gaProperty;
-    if (document.cookie.indexOf(disableStr + '=true') > -1) {
-      window[disableStr] = true;
-    }
+    <div class="row" style="height: 4rem"></div>
 
-    // Opt-out function
-    function gaOptout() {
-      document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-      window[disableStr] = true;
-    }
-    </script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135670334-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-135670334-1', {'anonymize_ip': true});
-      gtag('config', 'AW-756223310');
-    </script>
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/regular.css" integrity="sha384-IG162Tfx2WTn//TRUi9ahZHsz47lNKzYOp0b6Vv8qltVlPkub2yj9TVwzNck6GEF" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
-
-    <link rel="stylesheet" type="text/css" href="portal.css">
-
-    <!-- Facebook Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '2210468249004535');
-      fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=2210468249004535&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
-
-    <title>Vermieterix</title>
-  </head>
-  <body>
-    <div class="container-fluid">
-
-      <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
-        <div class="navbar-brand d-flex align-items-center justify-content-center" href="#">
-          <img class="img-fluid" src="imgo.jpg" style="height: 56px;">
-          <!-- <i class="far fa-building fa-2x pr-2"></i> -->
-          <a class="pt-2 pl-2" href="index.html" id="title">Vermieterix</a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item pt-2 pt-md-0 pr-2">
-              <a href="#funktionen" role="button" class="btn btn-md" style="background-color: #152877; color: #ffffff">Funktionen</a>
-            </li>
-            <li class="nav-item py-2 pt-md-0">
-              <a href="#pricing" role="button" class="btn btn-md" style="background-color: #152877; color: #ffffff">Kostenlos Testen</a>
-            </li>
-          </ul>
-        </div>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </nav>
-
-      <div class="row" style="height: 4rem"></div>
-
-      <div class="row">
-        <div class="col px-0">
-          <img src="markus-spiske-1192711-unsplash_c.jpg" class="img-fluid px-0" alt="City View">
-          <div class="carousel-caption px-4">
-            <div class="row h-100 align-items-center">
-              <div class="order-md-first col-md-6 d-flex justify-content-center align-items-center">
-                <h1 class="text-center d-none d-md-block" style="font-weight: bold;">Die einfache Lösung <br> zur Verwaltung Ihrer Immobilien</h3>
-                <h3 class="text-center d-md-none" style="font-weight: bold">Die einfache Lösung <br> zur Verwaltung Ihrer Immobilien</h4>
-              </div>
-              <div class="col-10 d-none d-md-block offset-1 col-md-6 offset-md-0">
-                <img class="img-fluid" src="dashboard-mockup.png" alt="Dashboard">
-              </div>
+    <div class="row">
+      <div class="col px-0">
+        <img src="assets/images/markus-spiske-1192711-unsplash_c.jpg" class="img-fluid px-0" alt="City View">
+        <div class="carousel-caption px-4">
+          <div class="row h-100 align-items-center">
+            <div class="order-md-first col-md-6 d-flex justify-content-center align-items-center">
+              <h1 class="text-center d-none d-md-block" style="font-weight: bold;">Die einfache Lösung <br> zur Verwaltung Ihrer Immobilien</h3>
+              <h3 class="text-center d-md-none" style="font-weight: bold">Die einfache Lösung <br> zur Verwaltung Ihrer Immobilien</h4>
+            </div>
+            <div class="col-10 d-none d-md-block offset-1 col-md-6 offset-md-0">
+              <img class="img-fluid" src="assets/images/dashboard-mockup.png" alt="Dashboard">
             </div>
           </div>
         </div>
       </div>
-
-      <div class="row pt-4 d-md-none">
-        <div class="col-10 offset-1">
-          <img class="img-fluid" src="dashboard-mockup.png" alt="Dashboard">
-        </div>
-      </div>
-
-      <div class="row pt-4 d-md-none" id="funktionen">
-        <div class="col-4 offset-4">
-          <div class="dropdown-divider"></div>
-        </div>
-      </div>
-
-      <div class="row py-4">
-        <div class="col-10 d-flex flex-column offset-1 col-md-8 offset-md-2 off align-items-center">
-          <div class="text-center">
-            <h2>Viele Funktionen erwarten Sie, die Ihre Immobilienverwaltung vereinfachen</h2>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="row py-4 shadow" style="background-color: #f6f6f6">
-        <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
-          <i class="pb-4 fas fa-search-dollar fa-5x"></i>
-          <h4 class="px-4 text-center">Bankanbindung</h4>
-          <p class="px-4 text-center feature-text">
-            Mit der sicheren Verbindung zum Online-Banking werden alle relevanten Zahlungsströme (z.B. Mieteingänge) automatisch Kostenarten und Ihren Einheiten zugeordnet.
-          </p>
-        </div>
-        <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
-          <i class="pb-4 fas fa-tachometer-alt fa-5x"></i>
-          <h4 class="px-4 text-center">Dashboard</h4>
-          <p class="px-4 text-center feature-text">
-            Auf dem Dashboard erhalten Sie einen Überblick zu Auswertungen von Zahlungsströmen, Rendite und weiteren Kennzahlen.
-          </p>
-        </div>
-        <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
-          <i class="pb-4 far fa-file-alt fa-5x"></i>
-          <h4 class="px-4 text-center">Dokumentverwaltung</h4>
-          <p class="px-4 text-center feature-text">
-            Mietverträge, Rechnungen und alle weiteren Dokumente können hochgeladen oder direkt mit dem Smartphone gescannt und von überall abgerufen werden.
-          </p>
-        </div>
-        <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
-          <i class="pb-4 far fa-bell fa-5x"></i>
-          <h4 class="px-4 text-center">Benachrichtigungen</h4>
-          <p class="px-4 text-center feature-text">
-            Wir informieren Sie zu ausbleibenden Mieteingängen oder wenn der nächste wichtige Termin (z.B. Aufzugswartung, Vertragskündigung etc.) ansteht.
-          </p>
-        </div>
-        <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
-          <i class="pb-4 fas fa-cash-register fa-5x"></i>
-          <h4 class="px-4 text-center">Betriebskostenabrechnung</h4>
-          <p class="px-4 text-center feature-text">
-            Wir unterstützen Sie bei der Nebenkostenabrechnung mit einer automatischen Zuordnung von relevanten Zahlungen und einer Übersicht zu fehlenden Informationen.
-          </p>
-        </div>
-        <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
-          <i class="pb-4 far fa-user fa-5x"></i>
-          <h4 class="px-4 text-center">Digitaler Concierge</h4>
-          <p class="px-4 text-center feature-text">
-            Unser digitaler Concierge beantwortet alle Fragen rund um Ihre Immobilien und stellt rechtssichere Vorlagen für Mietverträge und Anschreiben zur Verfügung.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="row pt-5" id="pricing">
-        <div class="col-8 d-flex flex-column offset-2 align-items-center">
-          <div class="text-center">
-            <h2>Optionen</h2>
-            <p>Wählen Sie das passende Paket für ihre Ansprüche. 30 Tage kostenlos.</p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="row justify-content-center">
-        <div class="col-10 offset-sm-0 col-sm-6 col-md-4 col-lg-3 mt-2 mt-lg-0">
-          <div class="card shadow">
-            <div class="card-body">
-              <h2 class="card-title" style="font-weight: bold">LITE</h2>
-              <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text on the card</p> -->
-              <div class="pb-0 price-info">je Einheit</div>
-              <div>
-                <span class="price" id="price-tag-0">1</span><span class="price">€</span><span class="price-info">/Mo</span>
-              </div>
-              <div class="d-flex flex-column">
-                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Bankanbindung</span></div>
-                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dashboard</span></div>
-                <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Dokumentenverwaltung</span></div>
-                <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Benachrichtungen</span></div>
-                <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Betriebskostenabrechnung</span></div>
-                <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
-              </div>
-              <p></p>
-              <button type="button" href="vportal-anmelden.html" class="btn anmelden" id="testbutton-0" data-price="-1"><span class="spinner-border spinner-border-sm d-none" id='spinner-0' role="status" aria-hidden="true"></span>Mehr erfahren</button>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-10 offset-sm-0 col-sm-6 col-md-4 col-lg-3 mt-2 mt-lg-0">
-          <div class="card shadow">
-            <div class="card-body">
-              <h2 class="card-title" style="font-weight: bold">PRO</h2>
-              <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text on the card</p> -->
-              <div>
-                <div class="pb-0 price-info">je Einheit</div>
-                <span class="price" id="price-tag-1">2,50</span><span class="price">€</span><span class="price-info">/Mo</span>
-              </div>
-              <div class="d-flex flex-column">
-                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Bankanbindung</span></div>
-                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dashboard</span></div>
-                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dokumentenverwaltung</span></div>
-                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Benachrichtigungen</span></div>
-                <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Betriebskostenabrechnung</span></div>
-                <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
-              </div>
-              <p></p>
-              <button type="button" href="vportal-anmelden.html" class="btn anmelden" id="testbutton-1" data-price="-1"><span class="spinner-border spinner-border-sm d-none" id='spinner-1' role="status" aria-hidden="true"></span>Mehr erfahren</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-10 offset-sm-0 col-sm-6 col-md-4 col-lg-3 mt-2 mt-lg-0">
-          <div class="card shadow">
-            <div class="card-body">
-              <h2 class="card-title" style="font-weight: bold">UNLIMITED</h2>
-              <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text on the card</p> -->
-              <div>
-                <div class="pb-0 price-info">je Einheit</div>
-                <span class="price" id="price-tag-2">5</span><span class="price">€</span><span class="price-info">/Mo</span>
-              </div>
-              <div class="d-flex flex-column">
-                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Bankanbindung</span></div>
-                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dashboard</span></div>
-                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dokumentenverwaltung</span></div>
-                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Benachrichtigungen</span></div>
-                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Betriebskostenabrechnung</span></div>
-                <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Digitaler Concierge</span></div>
-              </div>
-              <p></p>
-              <button type="button" href="vportal-anmelden.html" class="btn anmelden" id="testbutton-2" data-price="-1"><span class="spinner-border spinner-border-sm d-none" id='spinner-2' role="status" aria-hidden="true"></span>Mehr erfahren</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row py-4 justify-content-center">
-        <div class="col text-center">
-            <a href="impressum.html" style="color: #152877; text-decoration: none">Impressum</a>
-            <a class="pl-4" href="impressum.html#Datenschutz" style="color: #152877; text-decoration: none">Datenschutz</a>
-        </div>
-      </div>
-
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div class="row pt-4 d-md-none">
+      <div class="col-10 offset-1">
+        <img class="img-fluid" src="assets/images/dashboard-mockup.png" alt="Dashboard">
+      </div>
+    </div>
+
+    <div class="row pt-4 d-md-none" id="funktionen">
+      <div class="col-4 offset-4">
+        <div class="dropdown-divider"></div>
+      </div>
+    </div>
+
+    <div class="row py-4">
+      <div class="col-10 d-flex flex-column offset-1 col-md-8 offset-md-2 off align-items-center">
+        <div class="text-center">
+          <h2>Viele Funktionen erwarten Sie, die Ihre Immobilienverwaltung vereinfachen</h2>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row py-4 shadow" style="background-color: #f6f6f6">
+      <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
+        <i class="pb-4 fas fa-search-dollar fa-5x"></i>
+        <h4 class="px-4 text-center">Bankanbindung</h4>
+        <p class="px-4 text-center feature-text">
+          Mit der sicheren Verbindung zum Online-Banking werden alle relevanten Zahlungsströme (z.B. Mieteingänge) automatisch Kostenarten und Ihren Einheiten zugeordnet.
+        </p>
+      </div>
+      <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
+        <i class="pb-4 fas fa-tachometer-alt fa-5x"></i>
+        <h4 class="px-4 text-center">Dashboard</h4>
+        <p class="px-4 text-center feature-text">
+          Auf dem Dashboard erhalten Sie einen Überblick zu Auswertungen von Zahlungsströmen, Rendite und weiteren Kennzahlen.
+        </p>
+      </div>
+      <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
+        <i class="pb-4 far fa-file-alt fa-5x"></i>
+        <h4 class="px-4 text-center">Dokumentverwaltung</h4>
+        <p class="px-4 text-center feature-text">
+          Mietverträge, Rechnungen und alle weiteren Dokumente können hochgeladen oder direkt mit dem Smartphone gescannt und von überall abgerufen werden.
+        </p>
+      </div>
+      <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
+        <i class="pb-4 far fa-bell fa-5x"></i>
+        <h4 class="px-4 text-center">Benachrichtigungen</h4>
+        <p class="px-4 text-center feature-text">
+          Wir informieren Sie zu ausbleibenden Mieteingängen oder wenn der nächste wichtige Termin (z.B. Aufzugswartung, Vertragskündigung etc.) ansteht.
+        </p>
+      </div>
+      <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
+        <i class="pb-4 fas fa-cash-register fa-5x"></i>
+        <h4 class="px-4 text-center">Betriebskostenabrechnung</h4>
+        <p class="px-4 text-center feature-text">
+          Wir unterstützen Sie bei der Nebenkostenabrechnung mit einer automatischen Zuordnung von relevanten Zahlungen und einer Übersicht zu fehlenden Informationen.
+        </p>
+      </div>
+      <div class="col-10 offset-1 pt-sm-0 col-sm-6 offset-sm-0 col-lg-4 mt-4 d-flex flex-column align-items-center">
+        <i class="pb-4 far fa-user fa-5x"></i>
+        <h4 class="px-4 text-center">Digitaler Concierge</h4>
+        <p class="px-4 text-center feature-text">
+          Unser digitaler Concierge beantwortet alle Fragen rund um Ihre Immobilien und stellt rechtssichere Vorlagen für Mietverträge und Anschreiben zur Verfügung.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="row pt-5" id="pricing">
+      <div class="col-8 d-flex flex-column offset-2 align-items-center">
+        <div class="text-center">
+          <h2>Optionen</h2>
+          <p>Wählen Sie das passende Paket für ihre Ansprüche. 30 Tage kostenlos.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row justify-content-center">
+      <div class="col-10 offset-sm-0 col-sm-6 col-md-4 col-lg-3 mt-2 mt-lg-0">
+        <div class="card shadow">
+          <div class="card-body">
+            <h2 class="card-title" style="font-weight: bold">LITE</h2>
+            <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text on the card</p> -->
+            <div class="pb-0 price-info">je Einheit</div>
+            <div>
+              <span class="price" id="price-tag-0">1</span><span class="price">€</span><span class="price-info">/Mo</span>
+            </div>
+            <div class="d-flex flex-column">
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Bankanbindung</span></div>
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dashboard</span></div>
+              <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Dokumentenverwaltung</span></div>
+              <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Benachrichtungen</span></div>
+              <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Betriebskostenabrechnung</span></div>
+              <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
+            </div>
+            <p></p>
+            <button type="button" href="vportal-anmelden.html" class="btn anmelden" id="testbutton-0" data-price="-1"><span class="spinner-border spinner-border-sm d-none" id='spinner-0' role="status" aria-hidden="true"></span>Mehr erfahren</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-10 offset-sm-0 col-sm-6 col-md-4 col-lg-3 mt-2 mt-lg-0">
+        <div class="card shadow">
+          <div class="card-body">
+            <h2 class="card-title" style="font-weight: bold">PRO</h2>
+            <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text on the card</p> -->
+            <div>
+              <div class="pb-0 price-info">je Einheit</div>
+              <span class="price" id="price-tag-1">2,50</span><span class="price">€</span><span class="price-info">/Mo</span>
+            </div>
+            <div class="d-flex flex-column">
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Bankanbindung</span></div>
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dashboard</span></div>
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dokumentenverwaltung</span></div>
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Benachrichtigungen</span></div>
+              <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Betriebskostenabrechnung</span></div>
+              <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
+            </div>
+            <p></p>
+            <button type="button" href="vportal-anmelden.html" class="btn anmelden" id="testbutton-1" data-price="-1"><span class="spinner-border spinner-border-sm d-none" id='spinner-1' role="status" aria-hidden="true"></span>Mehr erfahren</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-10 offset-sm-0 col-sm-6 col-md-4 col-lg-3 mt-2 mt-lg-0">
+        <div class="card shadow">
+          <div class="card-body">
+            <h2 class="card-title" style="font-weight: bold">UNLIMITED</h2>
+            <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text on the card</p> -->
+            <div>
+              <div class="pb-0 price-info">je Einheit</div>
+              <span class="price" id="price-tag-2">5</span><span class="price">€</span><span class="price-info">/Mo</span>
+            </div>
+            <div class="d-flex flex-column">
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Bankanbindung</span></div>
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dashboard</span></div>
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dokumentenverwaltung</span></div>
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Benachrichtigungen</span></div>
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Betriebskostenabrechnung</span></div>
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Digitaler Concierge</span></div>
+            </div>
+            <p></p>
+            <button type="button" href="vportal-anmelden.html" class="btn anmelden" id="testbutton-2" data-price="-1"><span class="spinner-border spinner-border-sm d-none" id='spinner-2' role="status" aria-hidden="true"></span>Mehr erfahren</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row py-4 justify-content-center">
+      <div class="col text-center">
+          <a href="impressum.html" style="color: #152877; text-decoration: none">Impressum</a>
+          <a class="pl-4" href="impressum.html#Datenschutz" style="color: #152877; text-decoration: none">Datenschutz</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+    if (document.cookie.indexOf("sessiontag=") >= 0) {
+      console.log('Hi again.');
+    } else {
+      console.log('Creating sessiontag');
+      document.cookie="sessiontag=" + Math.trunc(Math.random() * 10000000) + "; expires=1";
+    }
+  </script>
+  
+  <script type="text/javascript">
     
-    <script type="text/javascript">
+    // google AdWords
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', { 'send_to': 'AW-756223310/eDWKCPmw-5YBEM6azOgC', 'event_callback': callback });
+      return false;
+    }
+
+    $(document).ready(function() {
+
+      // Set the prices with a 50/50 chance fot both sets
       
-      // google AdWords
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof(url) != 'undefined') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'conversion', { 'send_to': 'AW-756223310/eDWKCPmw-5YBEM6azOgC', 'event_callback': callback });
-        return false;
+      if (Math.random() >= 0.5) {
+        var prices = [0, 0.5, 1];
+        var option = 'A';
+      } else {
+        var prices = [1, 2.5, 5];
+        var option = 'B';
       }
 
-      $(document).ready(function() {
+      for (i = 0; i < prices.length; i++) { 
+        $('#price-tag-' + i).text(prices[i]);
+        $('#testbutton-' + i).data('price', prices[i])
+      }
 
-        // Set the prices with a 50/50 chance fot both sets
+      $('.anmelden').on('click', function(event) {
+        gtag_report_conversion('https://vermieterix.com/vportal-anmelden.html');
+
+        var formData = {
+          'site_id': '{{ site.version }}',
+          'price': $(event.target).data('price').toString(),
+          'option': option,
+          'cookie': document.cookie
+        };
         
-        if (Math.random() >= 0.5) {
-          var prices = [0, 0.5, 1];
-          var option = 'A';
-        } else {
-          var prices = [1, 2.5, 5];
-          var option = 'B';
-        }
+        console.log(formData);
 
-        for (i = 0; i < prices.length; i++) { 
-          $('#price-tag-' + i).text(prices[i]);
-          $('#testbutton-' + i).data('price', prices[i])
-        }
+        // activate spiner
+        $(this).find('.spinner-border').toggleClass('d-none')
 
-        $('.anmelden').on('click', function(event) {
-          gtag_report_conversion('https://vermieterix.com/vportal-anmelden.html');
-
-          var formData = {
-            'site_id': 'website-v0.2',
-            'price': $(event.target).data('price').toString(),
-            'option': option,
-            'cookie': document.cookie
-          };
-          
-          console.log(formData);
-
-          // activate spiner
-          $(this).find('.spinner-border').toggleClass('d-none')
-
-          $.ajax({
-            type: 'POST',
-            url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/activity',
-            data: JSON.stringify(formData),
-            dataType: 'json',
-            crossDomain: true,
-            encode: true,
-            success: function(responseData, textStatus, jqXHR) {
-              console.log(responseData);
-              window.location.href = 'vportal-anmelden.html?option=' + option + '&price=' + formData['price'];
-            },
-            error: function(responseData, textStatus, errorThrown) {
-              console.warn(responseData, textStatus, errorThrown);
-            }
-          });
+        $.ajax({
+          type: 'POST',
+          url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/activity',
+          data: JSON.stringify(formData),
+          dataType: 'json',
+          crossDomain: true,
+          encode: true,
+          success: function(responseData, textStatus, jqXHR) {
+            console.log(responseData);
+            window.location.href = 'vportal-anmelden.html?option=' + option + '&price=' + formData['price'];
+          },
+          error: function(responseData, textStatus, errorThrown) {
+            console.warn(responseData, textStatus, errorThrown);
+          }
         });
-
       });
-    </script>
-  </body>
-</html>
+
+    });
+  </script>
+</body>
