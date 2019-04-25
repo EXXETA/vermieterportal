@@ -73,3 +73,7 @@ body {
 #impressum h4 {
     padding-top: 0rem;
 }
+
+.hidden {
+    display: none;
+}

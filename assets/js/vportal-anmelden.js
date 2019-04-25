@@ -3,10 +3,12 @@
 $(document).ready(function() {
   $('#anmelden').on('click', function(event) {
     var formData = {
+      'vorname': $('input[name=vorname]').val(),
+      'name': $('input[name=name]').val(),
       'mail': $('input[name=email]').val(),
       'password': $('input[name=password]').val(),
-      'checkTOS': $('input[name=checkTOS]').is(":checked"),
-      'checkSupport': $('input[name=checkSupport]').is(":checked"),
+      'checkTOS': $('input[name=checkTOS]').is(':checked'),
+      'checkSupport': $('input[name=checkSupport]').is(':checked'),
       'site_id': '{{ site.version }}',
       'cookie': document.cookie
     };
@@ -23,7 +25,7 @@ $(document).ready(function() {
       success: function(responseData, textStatus, jqXHR) {
         console.log(responseData);
         $('#success').removeClass('d-none');
-        setTimeout(function() {$("#success").addClass('d-none')} , 5000);
+        setTimeout(function() {$('#success').addClass('d-none')} , 5000);
       },
       error: function(responseData, textStatus, errorThrown) {
         console.warn(responseData, textStatus, errorThrown);
