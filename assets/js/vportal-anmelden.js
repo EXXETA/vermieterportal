@@ -1,7 +1,12 @@
+---
+---
 $(document).ready(function() {
   $('#anmelden').on('click', function(event) {
     var formData = {
       'mail': $('input[name=email]').val(),
+      'password': $('input[name=password]').val(),
+      'checkTOS': $('input[name=checkTOS]').is(":checked"),
+      'checkSupport': $('input[name=checkSupport]').is(":checked"),
       'site_id': '{{ site.version }}',
       'cookie': document.cookie
     };
@@ -27,31 +32,48 @@ $(document).ready(function() {
     });
   });
 
+  function passwordsMatch() {
+    return $('#InputPassword').val() == $('#InputPasswordCheck').val();
+  }
+
   // CHECK IF PASSWORDS MATCH
   $('#InputPasswordCheck').on('focusout', function(event) {
-    console.log('Lost Focus');
-    // get password
-    if ($('#InputPassword').val() != $('#InputPasswordCheck').val()) {
-      alert('THIS SHIT MESSED UP DAWG!');
+    if (passwordsMatch()) {
+      $('#missmatch').hide();
     } else {
-      alert('COOL!');
+      $('#missmatch').show();
+      // setTimeout(function(){$('#missmatch').toggle()}, 5000);
+    }
+  });
+
+  function email_is_valid() {
+    return (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,63})+$/.test($('#inputEmail').val()));
+  }
+
+  $('#inputEmail').on('focusout', function(event) {
+    if (email_is_valid()) {
+      $('#emailInvalid').hide();
+    } else {
+      $('#emailInvalid').show();
+      // setTimeout(function(){$('#emailInvalid').toggle()}, 5000);
     }
   });
 
   function all_fields_are_filled() {
-    $('#SignUp .form-control').each(function(id, element) {
-      if ($(element).val() == "") {
-        return false;
+    var valid = true;
+    res = $('#SignUp .form-control').each(function(id, element) {
+      if ( $(element).val().length == 0) {
+        valid = false;
       }
-    })
-    return true;
+    });
+    return valid;
   }
 
   // CHECK FORM VALIDITY
   $('#SignUp').on('change', function(event) {
-    formIsValid = $('#CheckTOS').is(':checked') && all_fields_are_filled();
+    formIsValid = $('#CheckTOS').is(':checked') && all_fields_are_filled() && passwordsMatch() && email_is_valid();
 
-    if (formIsValid) {
+    if (formIsValid == true) {
       $('#anmelden').removeAttr('disabled');
       console.log('enabling');
     } else {
@@ -60,7 +82,7 @@ $(document).ready(function() {
     }
   });
 
-  // add loading time get price and options to be send with ajax request
+  // at loading time get price and options to be send with ajax request
   // var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
   // var url = new URL(url_string);
   // var c = url.searchParams.get("c");
