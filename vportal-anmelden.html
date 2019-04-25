@@ -35,12 +35,43 @@ layout: default
 
   <div class="row justify-content-center pt-5">
     <div class="col-10 col-md-6 p-4 shadow" style="background-color: #f6f6f6; border-radius: 13px">
-      <form>
+      <form id="SignUp">
         <div class="form-group">
-          <label for="exampleInputEmail1">Wir versenden keine Werbung und geben Ihre Informationen nicht an Dritte weiter.</label>
-          <input type="email" class="form-control" id="inputEmail" name='email' aria-describedby="emailHelp" placeholder="E-mail">
+          <label for="InputVorname">Vorname</label>
+          <input type="text" class="form-control" id="inputVorname" name="vorname" placeholder="Vorname">
         </div>
-        <button type="button" class="btn anmelden" id="anmelden">Anmelden</button>
+
+        <div class="form-group">
+          <label for="InputVorname">Name</label>
+          <input type="text" class="form-control" id="inputName" name="name" placeholder="Name">
+        </div>
+
+        <div class="form-group">
+          <label for="InputEmail">Wir versenden keine Werbung und geben Ihre Informationen nicht an Dritte weiter.</label>
+          <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp" placeholder="E-mail">
+        </div>
+
+         <div class="form-group">
+          <label for="InputPassword">Passwort</label>
+          <input type="password" class="form-control" id="InputPassword" placeholder="Passwort">
+        </div>
+
+        <div class="form-group">
+          <label for="InputEmailPasswirdCheck">Passwortüberprüfung</label>
+          <input type="password" class="form-control" id="InputPasswordCheck" name="passwordCheck" placeholder="Passwort">
+        </div>
+        
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="CheckSupport">
+          <label class="form-check-label" for="Check1">Ich interessiere mich für telefonischen Support.</label>
+        </div>
+
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="CheckTOS">
+          <label class="form-check-label" for="Check1">Ich stimme den Nutzungsbedingungen zu.</label>
+        </div>
+        
+        <button type="button" class="btn anmelden" id="anmelden" disabled>Anmelden</button>
       </form>
     </div>
   </div>
@@ -53,41 +84,4 @@ layout: default
 
 </div>
 
-<script type="text/javascript">         
-  $(document).ready(function() {
-
-    $('#anmelden').on('click', function(event) {
-      var formData = {
-        'mail': $('input[name=email]').val(),
-        'site_id': '{{ site.version }}',
-        'cookie': document.cookie
-      };
-
-      console.log(formData);
-
-      $.ajax({
-        type: 'POST',
-        url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/anmelden',
-        data: JSON.stringify(formData),
-        dataType: 'json',
-        crossDomain: true,
-        encode: true,
-        success: function(responseData, textStatus, jqXHR) {
-          console.log(responseData);
-          $('#success').removeClass('d-none');
-          setTimeout(function() {$("#success").addClass('d-none')} , 5000);
-        },
-        error: function(responseData, textStatus, errorThrown) {
-          console.warn(responseData, textStatus, errorThrown);
-          alert('CORS failed - ' + textStatus);
-        }
-      });
-    });
-
-    // add loading time get price and options to be send with ajax request
-    // var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
-    // var url = new URL(url_string);
-    // var c = url.searchParams.get("c");
-    // console.log(c);
-  });
-</script>
+<script type="text/javascript" src="assets/js/vportal-anmelden.js"></script>
