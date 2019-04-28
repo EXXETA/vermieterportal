@@ -64,7 +64,7 @@ $(document).ready(function() {
   function all_fields_are_filled() {
     var valid = true;
     res = $('#SignUp .form-control').each(function(id, element) {
-      if ( $(element).val().length == 0) {
+      if ($(element).val().length == 0) {
         valid = false;
       }
     });

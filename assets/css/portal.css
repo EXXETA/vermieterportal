@@ -77,3 +77,7 @@ body {
 .hidden {
     display: none;
 }
+
+.image-strip {
+    width: 100%;
+}
