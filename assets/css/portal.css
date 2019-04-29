@@ -8,6 +8,10 @@ body {
     width:100%;
     height: 100%;
     left: 0;
+    background: rgba(246, 246, 246, 0.4);
+}
+
+.greyed {
     background: rgba(246, 246, 246, 0.75);
 }
 
@@ -50,7 +54,7 @@ body {
     background-color: #10B201;
 }
 
-.price-text {
+#price-estimate {
     font-size: 240%;
 }
 
@@ -80,4 +84,18 @@ body {
 
 .image-strip {
     width: 100%;
+}
+
+#registration {
+    /*background-color: #f6f6f6;
+    border-radius: 13px;*/
+}
+
+#footer {
+    background: #152877;
+}
+
+#footer a {
+    color: #ffffff;
+    text-decoration: none;
 }

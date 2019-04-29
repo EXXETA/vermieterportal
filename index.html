@@ -48,7 +48,7 @@ layout: default
     <div class="row" >
       <div class="col px-0">
         <img src="assets/images/objektverwaltung.jpg" class="img-fluid px-0 image-strip" alt="objektverwaltung">
-        <div class="carousel-caption px-4">
+        <div class="carousel-caption greyed px-4">
           <div class="row h-100 align-items-center">
             <div class="col-4 offset-6">
               <h2>Automatisierte Erstellung der Nebenkostenabrechnung</h2>
@@ -66,7 +66,7 @@ layout: default
     <div class="row">
       <div class="col px-0">
         <img src="assets/images/robohand.jpg" class="img-fluid px-0 image-strip" alt="robohand">
-        <div class="carousel-caption px-4">
+        <div class="carousel-caption greyed px-4">
           <div class="row h-100 align-items-center">
             <div class="col-4 offset-1">
               <h2>Einfache Verwaltung von Objekten und Mietern</h2>
@@ -92,7 +92,7 @@ layout: default
     <div class="row">
       <div class="col px-0">
         <img src="assets/images/documents_2.jpg" class="img-fluid px-0 image-strip" alt="documents">
-        <div class="carousel-caption px-4">
+        <div class="carousel-caption greyed px-4">
           <div class="row h-100 align-items-center">
             <div class="col-4 offset-6">
               <h2>Sichere Archivierung aller Dokumente</h2>
@@ -107,53 +107,36 @@ layout: default
       </div>
     </div>
 
-    <div class="row justify-content-center">
-      <div class="col-4">
-        <div class="text-center">
+    <div class="row py-4 justify-content-center">
+      <div class="col-7 text-center">
+        <div>
           <h2>Testen Sie jetzt Vermieterix ohne Risiko</h2>
           <p>90 Tage Geld-zurück-Garantie</p>
         </div>
         <div class="form-group">
-          <label for="unitSlider">Wieviele Wohneinheiten möchten Sie verwalten? (0-30)</label>
-          <input type="range" class="custom-range" min="0" max="30" id="units">
+          <!-- <label for="unitSlider">Wieviele Wohneinheiten möchten Sie verwalten? (0-30)</label> -->
+          <input type="range" class="custom-range" min="1" max="100" id="units">
         </div>
         <div><span id='units-label'>25</span> Wohneinheiten</div>
-        <div><span id='price-estimate'>25€</span>/Jahr</div>
+        <div><span id='price-estimate'>25</span><span id="price-text">€</span>/Jahr</div>
         <div>(<span class="price">1</span> Euro je Einheit)</div>
       </div>
     </div>
 
-
-    <div class="row">
-      <div class="col px-0">
-        <img src="assets/images/peter.jpg" class="img-fluid px-0 image-strip" alt="peter">
-        <div class="carousel-caption px-4">
-          <div class="row h-100">
-            <div class="col-4"> 
-              <h2>Peter verwaltet seine Immobilien jetzt online.</h2>
-              <div>Finden Sie heraus, wie Sie mit Vermieterix Zeit und Geld sparen können</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row pt-5" id="pricing">
+    <!-- <div class="row pt-5" id="pricing">
       <div class="col-8 d-flex flex-column offset-2 align-items-center">
         <div class="text-center">
           <h2>Optionen</h2>
           <p>Wählen Sie das passende Paket für ihre Ansprüche. 30 Tage kostenlos.</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="row justify-content-center">
+<!--     <div class="row py-4 justify-content-center">
       <div class="col-10 offset-sm-0 col-sm-6 col-md-4 col-lg-3 mt-2 mt-lg-0">
         <div class="card shadow">
           <div class="card-body">
             <h2 class="card-title" style="font-weight: bold">LITE</h2>
-            <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text on the card</p> -->
             <div class="pb-0 price-info">je Einheit</div>
             <div>
               <span class="price price-text" id="price-tag">1</span><span class="price-text">€</span><span class="price-info">/Mo</span>
@@ -167,27 +150,117 @@ layout: default
               <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Digitaler Concierge</span></div>
             </div>
             <p></p>
-            <button type="button" href="vportal-anmelden.html" class="btn" id="anmelden" data-price="-1"><span class="spinner-border spinner-border-sm d-none" id='spinner-0' role="status" aria-hidden="true"></span>Mehr erfahren</button>
+            <button type="button" href="vportal-anmelden.html" class="btn" id="anmelden" data-price="-1"><span class="spinner-border spinner-border-sm d-none" id='spinner-0' role="status" aria-hidden="true"></span>Jetzt kostenlos registrieren</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="row justify-content-center py-4">
+      <div class="col-10 col-md-6 p-4" id="registration">
+        <form id="SignUp">
+
+          <div class="form-row">
+            <div class="col">
+              <div class="form-group">
+                <label for="InputVorname">Vorname</label>
+                <input type="text" class="form-control" id="inputVorname" name="vorname" placeholder="Vorname">  
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="InputVorname">Name</label>
+                <input type="text" class="form-control" id="inputName" name="name" placeholder="Name">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="InputEmail">Email Adresse</label>
+                <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp" placeholder="E-mail">
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <div id="emailInvalid" class="alert alert-warning hidden" role="alert">Keine gültige Email Adresse.</div>
+              </div>
+            </div>
+          </div>
+
+
+           <!-- <div class="form-group">
+            <label for="InputPassword">Passwort</label>
+            <input type="password" class="form-control" id="InputPassword" name="password" placeholder="Passwort">
+          </div>
+
+          <div class="form-group">
+            <label for="InputPasswordCheck">Passwortüberprüfung</label>
+            <input type="password" class="form-control" id="InputPasswordCheck" name="passwordCheck" placeholder="Passwort">
+          </div> -->
+
+          <!-- <div id="missmatch" class="alert alert-danger hidden" role="alert">
+            Die eingegebenen Passwörter stimmen nicht überein.
+          </div> -->
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="CheckSupport" name="checkSupport">
+                <label class="form-check-label" for="sheckSupport">Ich interessiere mich für telefonischen Support (5€/Monat)</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="row">
+            <div class="col">
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="CheckTOS" name="checkTOS">
+                <label class="form-check-label" for="checkTOS">Ich stimme den Nutzungsbedingungen zu.</label>
+              </div>
+            </div>
+          </div> -->
+          
+          <button type="button" class="btn anmelden" id="anmelden" disabled>Jetzt kostenlos registrieren</button>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col px-0">
+        <img src="assets/images/peter.jpg" class="img-fluid px-0 image-strip" alt="peter">
+        <div class="carousel-caption px-4">
+          <div class="row h-100">
+            <div class="col-4"> 
+              <h2>Peter verwaltet seine Immobilien jetzt online.</h2>
+              <div>Finden Sie heraus, wie Sie mit Vermieterix Zeit und Geld sparen können</div>
+              <a href="index.html#pricing" role="button" class="btn btn-md" style="background-color: #152877; color: #ffffff">Kostenlos Testen</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="row pt-5" id="pricing">
-      <div class="col-8 d-flex flex-column offset-2 align-items-center">
+    <div class="row py-5" id="pricing">
+      <div class="col-8 py-4 d-flex flex-column offset-2 align-items-center">
         <div class="text-center">
-          <div><i class="fas fa-5x fa-shield-alt"></i></div>
-          <p>Sicherheit im Datenschutz kommt für uns an erster Stelle</p>
-          <div>Wir legen allerhöchsten Wert auf die Sicherheit Ihrer Daten. Zur Übertragung Ihrer Daten verwenden wir ausschließlich sichere, verschlüsselte Verbindungen (TLS/SSL), sodass diese nicht von Unbefugten abgegriffen werden können.</div>
+          <div class="pt-3"><i class="fas fa-5x fa-shield-alt" id="shield"></i></div>
+          <p class="pt-3">Sicherheit im Datenschutz kommt für uns an erster Stelle</p>
+          <div class="py-3">Wir legen allerhöchsten Wert auf die Sicherheit Ihrer Daten. Zur Übertragung Ihrer Daten verwenden wir ausschließlich sichere, verschlüsselte Verbindungen (TLS/SSL), sodass diese nicht von Unbefugten abgegriffen werden können.</div>
         </div>
       </div>
     </div>
 
 
-    <div class="row py-4 justify-content-center">
+    <div class="row py-4 justify-content-center" id="footer">
       <div class="col text-center">
-          <a href="impressum.html" style="color: #152877; text-decoration: none">Impressum</a>
-          <a class="pl-4" href="impressum.html#Datenschutz" style="color: #152877; text-decoration: none">Datenschutz</a>
+          <a href="impressum.html">Impressum</a>
+          <a class="pl-4" href="impressum.html#datenschutz">Datenschutz</a>
       </div>
     </div>
 
