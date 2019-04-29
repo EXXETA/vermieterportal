@@ -25,9 +25,11 @@ $(document).ready(function() {
     gtag_report_conversion('https://vermieterix.com/vportal-anmelden.html');
 
     var formData = {
+      'vorname': $('input[name=vorname]').val(),
+      'name': $('input[name=name]').val(),
+      'mail': $('input[name=email]').val(),
+      'checkSupport': $('input[name=checkSupport]').is(':checked'),
       'site_id': '{{ site.version }}',
-      'price': $(event.target).data('price').toString(),
-      'option': option,
       'cookie': document.cookie
     };
     
@@ -36,22 +38,35 @@ $(document).ready(function() {
     // activate spiner
     $(this).find('.spinner-border').toggleClass('d-none')
 
-    $.ajax({
-      type: 'POST',
-      url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/activity',
-      data: JSON.stringify(formData),
-      dataType: 'json',
-      crossDomain: true,
-      encode: true,
-      success: function(responseData, textStatus, jqXHR) {
-        console.log(responseData);
-        window.location.href = 'vportal-anmelden.html?option=' + option + '&price=' + formData['price'];
-      },
-      error: function(responseData, textStatus, errorThrown) {
-        console.warn(responseData, textStatus, errorThrown);
-        window.location.href = 'vportal-anmelden.html?option=' + option + '&price=' + formData['price'];
-      }
-    });
+    window.location.href = 'vportal-anmelden.html?option=' + option
+                                                    + '&price=' + price
+                                                    + '&vorname=' + formData['vorname']
+                                                    + '&name=' + formData['name']
+                                                    + '&mail=' + formData['mail']
+                                                    + '&checkSupport=' + formData['checkSupport'];
+
+    // $.ajax({
+    //   type: 'POST',
+    //   url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/anmelden',
+    //   data: JSON.stringify(formData),
+    //   dataType: 'json',
+    //   crossDomain: true,
+    //   encode: true,
+    //   success: function(responseData, textStatus, jqXHR) {
+    //     console.log(responseData);
+    //     window.location.href = 'vportal-anmelden.html?option=' + option
+    //                                                 + '&price=' + price
+    //                                                 + '&vorname=' + formData['vorname']
+    //                                                 + '&name=' + formData['name']
+    //                                                 + '&mail=' + formData['mail']
+    //                                                 + '&checkSupport=' + formData['checkSupport'];
+    //   },
+    //   error: function(responseData, textStatus, errorThrown) {
+    //     console.warn(responseData, textStatus, errorThrown);
+    //     alert('CORS failed - ' + textStatus);
+    //   }
+    // });
+
   });
 
   $('#units').on('input', function(event) {
