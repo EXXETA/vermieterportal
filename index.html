@@ -37,17 +37,17 @@ layout: default
       </div>
     </div>
 
-    <div class="row py-4">
+<!--     <div class="row py-4">
       <div class="col-10 d-flex flex-column offset-1 col-md-8 offset-md-2 off align-items-center">
         <div class="text-center">
           <h2>Viele Funktionen erwarten Sie, die Ihre Immobilienverwaltung vereinfachen</h2>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="row" >
       <div class="col px-0">
-        <img src="assets/images/objektverwaltung.jpg" class="img-fluid px-0 image-strip" alt="City View">
+        <img src="assets/images/objektverwaltung.jpg" class="img-fluid px-0 image-strip" alt="objektverwaltung">
         <div class="carousel-caption px-4">
           <div class="row h-100 align-items-center">
             <div class="col-4 offset-6">
@@ -65,7 +65,7 @@ layout: default
 
     <div class="row">
       <div class="col px-0">
-        <img src="assets/images/robohand.jpg" class="img-fluid px-0 image-strip" alt="City View">
+        <img src="assets/images/robohand.jpg" class="img-fluid px-0 image-strip" alt="robohand">
         <div class="carousel-caption px-4">
           <div class="row h-100 align-items-center">
             <div class="col-4 offset-1">
@@ -91,7 +91,7 @@ layout: default
 
     <div class="row">
       <div class="col px-0">
-        <img src="assets/images/documents_2.jpg" class="img-fluid px-0 image-strip" alt="City View">
+        <img src="assets/images/documents_2.jpg" class="img-fluid px-0 image-strip" alt="documents">
         <div class="carousel-caption px-4">
           <div class="row h-100 align-items-center">
             <div class="col-4 offset-6">
@@ -110,23 +110,23 @@ layout: default
     <div class="row justify-content-center">
       <div class="col-4">
         <div class="text-center">
-          <h2>Testen Sie jetzt Vermieterix ohne Risikos</h2>
+          <h2>Testen Sie jetzt Vermieterix ohne Risiko</h2>
           <p>90 Tage Geld-zurück-Garantie</p>
         </div>
         <div class="form-group">
-          <label for="customRange2">Example range</label>
-          <input type="range" class="custom-range" min="0" max="30" id="customRange2">
+          <label for="unitSlider">Wieviele Wohneinheiten möchten Sie verwalten? (0-30)</label>
+          <input type="range" class="custom-range" min="0" max="30" id="units">
         </div>
-        <div><span>25</span> Wohneinheiten</div>
-        <div><span>250€</span>/Jahr</div>
-        <div>(10 Euro je Einheit)</div>
+        <div><span id='units-label'>25</span> Wohneinheiten</div>
+        <div><span id='price-estimate'>25€</span>/Jahr</div>
+        <div>(<span class="price">1</span> Euro je Einheit)</div>
       </div>
     </div>
 
 
     <div class="row">
       <div class="col px-0">
-        <img src="assets/images/peter.jpg" class="img-fluid px-0" alt="City View">
+        <img src="assets/images/peter.jpg" class="img-fluid px-0 image-strip" alt="peter">
         <div class="carousel-caption px-4">
           <div class="row h-100">
             <div class="col-4"> 
@@ -156,18 +156,18 @@ layout: default
             <p class="card-text">Some quick example text on the card</p> -->
             <div class="pb-0 price-info">je Einheit</div>
             <div>
-              <span class="price" id="price-tag-0">1</span><span class="price">€</span><span class="price-info">/Mo</span>
+              <span class="price price-text" id="price-tag">1</span><span class="price-text">€</span><span class="price-info">/Mo</span>
             </div>
             <div class="d-flex flex-column">
               <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Bankanbindung</span></div>
               <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dashboard</span></div>
-              <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Dokumentenverwaltung</span></div>
-              <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Benachrichtungen</span></div>
-              <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Betriebskostenabrechnung</span></div>
-              <div><i class="pr-1 far fa-circle"></i><span class="unchecked">Digitaler Concierge</span></div>
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Dokumentenverwaltung</span></div>
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Benachrichtungen</span></div>
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Betriebskostenabrechnung</span></div>
+              <div><i class="pr-1 far fa-check-circle"></i><span class="checked">Digitaler Concierge</span></div>
             </div>
             <p></p>
-            <button type="button" href="vportal-anmelden.html" class="btn anmelden" id="testbutton-0" data-price="-1"><span class="spinner-border spinner-border-sm d-none" id='spinner-0' role="status" aria-hidden="true"></span>Mehr erfahren</button>
+            <button type="button" href="vportal-anmelden.html" class="btn" id="anmelden" data-price="-1"><span class="spinner-border spinner-border-sm d-none" id='spinner-0' role="status" aria-hidden="true"></span>Mehr erfahren</button>
           </div>
         </div>
       </div>
@@ -206,5 +206,5 @@ layout: default
     }
   </script>
 
-  <script type="text/javascript" src="assets/js/"></script>
+  <script type="text/javascript" src="assets/js/index.js"></script>
 </body>

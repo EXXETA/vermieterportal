@@ -8,22 +8,20 @@ if (document.cookie.indexOf("sessiontag=") >= 0) {
 
 $(document).ready(function() {
 
-  // Set the prices with a 50/50 chance fot both sets
+  // Set the price with a 50/50 chance fot both sets
   
   if (Math.random() >= 0.5) {
-    var prices = [0, 0.5, 1];
+    var price = 10;
     var option = 'A';
   } else {
-    var prices = [1, 2.5, 5];
+    var price = 20;
     var option = 'B';
   }
 
-  for (i = 0; i < prices.length; i++) { 
-    $('#price-tag-' + i).text(prices[i]);
-    $('#testbutton-' + i).data('price', prices[i])
-  }
+  $('.price').text(price);
+  $('#anmelden').data('price', price);
 
-  $('.anmelden').on('click', function(event) {
+  $('#anmelden').on('click', function(event) {
     gtag_report_conversion('https://vermieterix.com/vportal-anmelden.html');
 
     var formData = {
@@ -51,8 +49,38 @@ $(document).ready(function() {
       },
       error: function(responseData, textStatus, errorThrown) {
         console.warn(responseData, textStatus, errorThrown);
+        window.location.href = 'vportal-anmelden.html?option=' + option + '&price=' + formData['price'];
       }
     });
   });
+
+  $('#units').on('input', function(event) {
+    units = $('#units').val();
+    $('#units-label').text(units);
+    $('#price-estimate').text(units * price);
+  });
+
+  $('#units').on('change', function(event) {
+    var formData = {
+      'site_id': '{{ site.version }}',
+      'price': price.toString(),
+      'option': option,
+      'cookie': document.cookie,
+      'units': $('#units').val()
+    };
+    
+    console.log(formData);
+
+    $.ajax({
+      type: 'POST',
+      url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/activity',
+      data: JSON.stringify(formData),
+      dataType: 'json',
+      crossDomain: true,
+      encode: true,
+      success: function(responseData, textStatus, jqXHR) {console.log(responseData);},
+      error: function(responseData, textStatus, errorThrown) {console.warn(responseData, textStatus, errorThrown);}
+    });
+  });  
 
 });
