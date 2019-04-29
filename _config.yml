@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Vermieterix
-version: v0.3.2
+version: v0.3.3
 env: prod
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"

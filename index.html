@@ -33,7 +33,7 @@ layout: default
 
     <div class="row pt-4 d-md-none" id="funktionen">
       <div class="col-4 offset-4">
-        <div class="dropdown-divider"></div>
+        <!-- <div class="dropdown-divider"></div> -->
       </div>
     </div>
 
@@ -48,10 +48,11 @@ layout: default
     <div class="row" >
       <div class="col px-0">
         <img src="assets/images/2zu1_objektverwaltung.jpg" class="img-fluid px-0 image-strip" alt="objektverwaltung">
-        <div class="carousel-caption greyed px-4">
+        <div class="carousel-caption whitened px-4">
           <div class="row h-100 align-items-center">
-            <div class="col-4 offset-6">
-              <h2>Automatisierte Erstellung der Nebenkostenabrechnung</h2>
+            <div class="col col-md-4 offset-md-6">
+              <h2 class="d-none d-md-block">Automatisierte Erstellung der Nebenkostenabrechnung</h2>
+              <h3 class="d-block d-md-none">Automatisierte Erstellung der Nebenkostenabrechnung</h3>
               <ul class="text-left pt-4 ml-4">
                 <li>Kinderleichte Nebenkostenabrechnung</li>
                 <li>Unterstützte Kostenerfassung durch Logikprüfung der Eingaben</li>
@@ -66,18 +67,20 @@ layout: default
     <div class="row">
       <div class="col px-0">
         <img src="assets/images/2zu1_robohand.jpg" class="img-fluid px-0 image-strip" alt="robohand">
-        <div class="carousel-caption greyed px-4">
+        <div class="carousel-caption blacked px-4">
           <div class="row h-100 align-items-center">
-            <div class="col-4 offset-1">
-              <h2>Digitale und einfache Verwaltung von Mietobjekten</h2>
+            <div class="col col-md-4 offset-md-1">
+              <h2 class="d-none d-md-block">Digitale und einfache Verwaltung von Mietobjekten</h2>
+              <h3 class="d-block d-md-none">Digitale und einfache Verwaltung von Mietobjekten</h3>
               <ul class="text-left pt-4 ml-4">
                 <li>Einfache Anlage und Übersicht aller Mietobjekte</li>
                 <li>Volle Unterstützung bei der Mietvertragserstellung</li>
                 <li>Übersichtliche Kontaktverwaltung aller Mieter an einem Ort </li>
               </ul>
             </div>
-            <div class="col-4 offset-1">
-              <h2>Transparente Übersicht aller Einnahmen und Ausgaben</h2>
+            <div class="col col-md-4 offset-md-1 d-none d-md-block">
+              <h2 class="d-none d-md-block">Transparente Übersicht aller Einnahmen und Ausgaben</h2>
+              <h3 class="d-block d-md-none">Transparente Übersicht aller Einnahmen und Ausgaben</h3>
               <ul class="text-left pt-4 ml-4">
                 <li>Vollständiger Überblick aller Transaktionen zu Ihren Mietern</li>
                 <li>Automatische Zuordnung von Kosten und Mieteingängen </li>
@@ -92,10 +95,11 @@ layout: default
     <div class="row">
       <div class="col px-0">
         <img src="assets/images/2zu1_documents.jpg" class="img-fluid px-0 image-strip" alt="documents">
-        <div class="carousel-caption greyed px-4">
+        <div class="carousel-caption whitened px-4">
           <div class="row h-100 align-items-center">
-            <div class="col-4 offset-6">
-              <h2>Sichere Archivierung aller Dokumente</h2>
+            <div class="col col-md-4 offset-md-6">
+              <h2 class="d-none d-md-block">Sichere Archivierung aller Dokumente</h2>
+              <h3 class="d-block d-md-none">Sichere Archivierung aller Dokumente</h3>
               <ul class="text-left pt-4 ml-4">
                 <li>Einfacher Upload aller Dokumente per Smartphone, Tablet oder PC</li>
                 <li>Sicherer Schutz vor Datenverlust</li>
@@ -221,10 +225,13 @@ layout: default
         <img src="assets/images/2zu1_peter.jpg" class="img-fluid px-0 image-strip" alt="peter">
         <div class="carousel-caption px-4">
           <div class="row h-100">
-            <div class="col-4"> 
-              <h2>Peter verwaltet seine Immobilien jetzt online.</h2>
-              <div>Finden Sie heraus, wie Sie mit Vermieterix Zeit und Geld sparen können</div>
-              <a href="index.html#testNow" role="button" class="btn btn-md" style="background-color: #152877; color: #ffffff">Jetzt kostenlos registrieren</a>
+            <div class="col pt-1 col-md-4 pt-md-5 offset-md-1 text-left" id="peter"> 
+              <h2 class="d-none d-md-block">Peter verwaltet seine Immobilien jetzt online.</h2>
+              <h3 class="d-block d-md-none">Peter verwaltet seine Immobilien jetzt online.</h3>
+              <div>Finden Sie heraus, wie Sie mit Vermieterix Zeit und Geld sparen können.</div>
+              <div class="pt-2">
+                <a href="index.html#testNow" role="button" class="btn btn-md" style="background-color: #152877; color: #ffffff">Jetzt kostenlos registrieren</a>
+              </div>
             </div>
           </div>
         </div>
@@ -232,22 +239,16 @@ layout: default
     </div>
 
     <div class="row py-5">
-      <div class="col-8 py-4 d-flex flex-column offset-2 align-items-center">
+      <div class="col col-md-8 offset-md-2 py-4 d-flex flex-column align-items-center">
         <div class="text-center">
           <div class="pt-3"><i class="fas fa-5x fa-shield-alt" id="shield"></i></div>
           <h3 class="pt-3">Sicherheit im Datenschutz kommt für uns an erster Stelle</h3>
-          <div class="py-3">Wir legen allerhöchsten Wert auf die Sicherheit Ihrer Daten. Zur Übertragung Ihrer Daten verwenden wir ausschließlich sichere, verschlüsselte Verbindungen (TLS/SSL), sodass diese nicht von Unbefugten abgegriffen werden können.</div>
+          <div class="py-3">Wir legen allerhöchsten Wert auf die Sicherheit Ihrer Daten.<br>Zur Übertragung Ihrer Daten verwenden wir ausschließlich sichere, verschlüsselte Verbindungen (TLS/SSL), sodass diese nicht von Unbefugten abgegriffen werden können.</div>
         </div>
       </div>
     </div>
 
-
-    <div class="row py-4 justify-content-center" id="footer">
-      <div class="col text-center">
-          <a href="impressum.html">Impressum</a>
-          <a class="pl-4" href="impressum.html#datenschutz">Datenschutz</a>
-      </div>
-    </div>
+    {% include _footer.html %}
 
   </div>
 
