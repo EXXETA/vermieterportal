@@ -23,12 +23,13 @@ body {
     color: #ffffff;
 }
 
-.blacked h3{
+.blacked ul{
     color: #ffffff;
 }
 
-.blacked ul{
-    color: #ffffff;
+.h-small{
+    font-size: 14pt;
+    font-weight: bold;
 }
 
 #title {
