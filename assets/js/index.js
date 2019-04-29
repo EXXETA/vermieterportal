@@ -81,6 +81,42 @@ $(document).ready(function() {
       success: function(responseData, textStatus, jqXHR) {console.log(responseData);},
       error: function(responseData, textStatus, errorThrown) {console.warn(responseData, textStatus, errorThrown);}
     });
-  });  
+  });
+
+  function email_is_valid() {
+    return (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,63})+$/.test($('#inputEmail').val()));
+  }
+
+  $('#inputEmail').on('focusout', function(event) {
+    if (email_is_valid()) {
+      $('#emailInvalid').hide();
+    } else {
+      $('#emailInvalid').show();
+      // setTimeout(function(){$('#emailInvalid').toggle()}, 5000);
+    }
+  });
+
+  function all_fields_are_filled() {
+    var valid = true;
+    res = $('#SignUp .form-control').each(function(id, element) {
+      if ($(element).val().length == 0) {
+        valid = false;
+      }
+    });
+    return valid;
+  }
+
+  // CHECK FORM VALIDITY
+  $('#SignUp').on('change', function(event) {
+    formIsValid = all_fields_are_filled() && email_is_valid();
+
+    if (formIsValid == true) {
+      $('#anmelden').removeAttr('disabled');
+      console.log('enabling');
+    } else {
+      $('#anmelden').attr('disabled', true);
+      console.log('disabling');
+    }
+  });
 
 });

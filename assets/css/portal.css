@@ -49,9 +49,24 @@ body {
     color: #94979b;
 }
 
+.form-control {
+    border-radius: 0px;
+    border-width: 0px;
+    border-bottom-width: 2px;
+    border-bottom-color: #777777;
+}
+
+.form-check-label {
+    font-size: 80%;
+}
+
 #anmelden {
     color: #ffffff;
     background-color: #10B201;
+}
+
+#units-label {
+    font-weight: bold;
 }
 
 #price-estimate {
@@ -59,7 +74,7 @@ body {
 }
 
 .price-info {
-    font-size: 80%;
+    font-size: 70%;
 }
 
 #impressum h1 {

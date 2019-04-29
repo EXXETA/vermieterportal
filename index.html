@@ -54,8 +54,8 @@ layout: default
               <h2>Automatisierte Erstellung der Nebenkostenabrechnung</h2>
               <ul class="text-left pt-4 ml-4">
                 <li>Kinderleichte Nebenkostenabrechnung</li>
-                <li>Unterstütze Kostenerfassung durch Logikprüfung der Eingaben</li>
-                <li>Kostenvergleich zum Vorjahr</li>
+                <li>Unterstützte Kostenerfassung durch Logikprüfung der Eingaben</li>
+                <li>Übersichtlicher Kostenvergleich zum Vorjahr</li>
               </ul>
             </div>
           </div>
@@ -69,19 +69,19 @@ layout: default
         <div class="carousel-caption greyed px-4">
           <div class="row h-100 align-items-center">
             <div class="col-4 offset-1">
-              <h2>Einfache Verwaltung von Objekten und Mietern</h2>
+              <h2>Digitale und einfache Verwaltung von Mietobjekten</h2>
               <ul class="text-left pt-4 ml-4">
-                <li>Einfache Anlage und Übersicht aller Mietobjekte</li>
-                <li>Unterstützung bei der Mietvertragserstellung</li>
-                <li>Kontaktverwaltung aller Mieter an einem Ort</li>
+                <li>Einfache Anlage und Übersicht aller Mietobjekte</li>
+                <li>Volle Unterstützung bei der Mietvertragserstellung</li>
+                <li>Übersichtliche Kontaktverwaltung aller Mieter an einem Ort </li>
               </ul>
             </div>
             <div class="col-4 offset-1">
-              <h2>Transparente Übersicht aller Einnahmen und Ausgaben</h2>
+              <h2>Transparente Übersicht aller Einnahmen und Ausgaben</h2>
               <ul class="text-left pt-4 ml-4">
-                <li>Sichere Verbindung zu Ihrem OnlineBanking</li>
-                <li>Überblick aller Transaktionen für alle Ihre Mieter</li>
-                <li>Automatische Zuordnung zu Ihren Objekten und Mietern</li>
+                <li>Vollständiger Überblick aller Transaktionen zu Ihren Mietern</li>
+                <li>Automatische Zuordnung von Kosten und Mieteingängen </li>
+                <li>Sichere Verbindung zu Ihrem Online-Banking</li>
               </ul>
             </div>
           </div>
@@ -97,9 +97,9 @@ layout: default
             <div class="col-4 offset-6">
               <h2>Sichere Archivierung aller Dokumente</h2>
               <ul class="text-left pt-4 ml-4">
-                <li>Einfacher Upload aller Dokumente per Smartphone oder PC</li>
-                <li>Schutz vor Datenverlust</li>
-                <li>Zugriff von überall mit jedem Gerät</li>
+                <li>Einfacher Upload aller Dokumente per Smartphone, Tablet oder PC</li>
+                <li>Sicherer Schutz vor Datenverlust</li>
+                <li id="testNow">Zugriff von überall mit jedem Gerät zu jeder Zeit</li>
               </ul>
             </div>
           </div>
@@ -119,7 +119,7 @@ layout: default
         </div>
         <div><span id='units-label'>25</span> Wohneinheiten</div>
         <div><span id='price-estimate'>25</span><span id="price-text">€</span>/Jahr</div>
-        <div>(<span class="price">1</span> Euro je Einheit)</div>
+        <div class="price-info">(<span class="price">1</span> Euro je Einheit)</div>
       </div>
     </div>
 
@@ -163,13 +163,13 @@ layout: default
           <div class="form-row">
             <div class="col">
               <div class="form-group">
-                <label for="InputVorname">Vorname</label>
+                <!-- <label for="InputVorname">Vorname</label> -->
                 <input type="text" class="form-control" id="inputVorname" name="vorname" placeholder="Vorname">  
               </div>
             </div>
             <div class="col">
               <div class="form-group">
-                <label for="InputVorname">Name</label>
+                <!-- <label for="InputVorname">Name</label> -->
                 <input type="text" class="form-control" id="inputName" name="name" placeholder="Name">
               </div>
             </div>
@@ -178,8 +178,8 @@ layout: default
           <div class="row">
             <div class="col">
               <div class="form-group">
-                <label for="InputEmail">Email Adresse</label>
-                <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp" placeholder="E-mail">
+                <!-- <label for="InputEmail">Email Adresse</label> -->
+                <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp" placeholder="E-mail Adresse">
               </div>
             </div>
           </div>
@@ -192,26 +192,11 @@ layout: default
             </div>
           </div>
 
-
-           <!-- <div class="form-group">
-            <label for="InputPassword">Passwort</label>
-            <input type="password" class="form-control" id="InputPassword" name="password" placeholder="Passwort">
-          </div>
-
-          <div class="form-group">
-            <label for="InputPasswordCheck">Passwortüberprüfung</label>
-            <input type="password" class="form-control" id="InputPasswordCheck" name="passwordCheck" placeholder="Passwort">
-          </div> -->
-
-          <!-- <div id="missmatch" class="alert alert-danger hidden" role="alert">
-            Die eingegebenen Passwörter stimmen nicht überein.
-          </div> -->
-
           <div class="row">
             <div class="col">
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="CheckSupport" name="checkSupport">
-                <label class="form-check-label" for="sheckSupport">Ich interessiere mich für telefonischen Support (5€/Monat)</label>
+                <label class="form-check-label" for="sheckSupport">persönlicher telefonischen Support (5€/Monat)</label>
               </div>
             </div>
           </div>
@@ -225,7 +210,7 @@ layout: default
             </div>
           </div> -->
           
-          <button type="button" class="btn anmelden" id="anmelden" disabled>Jetzt kostenlos registrieren</button>
+          <button type="button" class="btn anmelden align-self-center" id="anmelden" disabled>Jetzt kostenlos registrieren</button>
         </form>
       </div>
     </div>
@@ -239,14 +224,14 @@ layout: default
             <div class="col-4"> 
               <h2>Peter verwaltet seine Immobilien jetzt online.</h2>
               <div>Finden Sie heraus, wie Sie mit Vermieterix Zeit und Geld sparen können</div>
-              <a href="index.html#pricing" role="button" class="btn btn-md" style="background-color: #152877; color: #ffffff">Kostenlos Testen</a>
+              <a href="index.html#testNow" role="button" class="btn btn-md" style="background-color: #152877; color: #ffffff">Jetzt kostenlos registrieren</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="row py-5" id="pricing">
+    <div class="row py-5">
       <div class="col-8 py-4 d-flex flex-column offset-2 align-items-center">
         <div class="text-center">
           <div class="pt-3"><i class="fas fa-5x fa-shield-alt" id="shield"></i></div>
