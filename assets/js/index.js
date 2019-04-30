@@ -11,7 +11,7 @@ $(document).ready(function() {
   // Set the price with a 50/50 chance fot both sets
   rnd = Math.random();
 
-  if (rnd >= 0.33) {
+  if (rnd >= 0.33 && rnd < 0.66) {
     var price = 5;
     var option = 'A';
   } else if (rnd >= 0.66) {
