@@ -27,8 +27,17 @@ ul {
     padding-left: 20px;
 }
 
+li {
+    line-height: 110%;
+    padding-top: 5pt;
+}
+
 .whitened {
     background: rgba(246, 246, 246, 0.85);
+}
+
+.whitened h2 {
+    font-weight: lighter;
 }
 
 .blacked {
@@ -37,6 +46,7 @@ ul {
 
 .blacked h2{
     color: #ffffff;
+    font-weight: lighter;
 }
 
 .blacked ul{
@@ -99,11 +109,12 @@ ul {
 }
 
 #units-label {
+    font-size: 240%;
     font-weight: bold;
 }
 
 #price-estimate {
-    font-size: 240%;
+    font-size: 180%;
 }
 
 .price-info {
