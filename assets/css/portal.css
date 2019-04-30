@@ -3,6 +3,18 @@ body {
      color: #152877;
 }
 
+.container {
+    /*max-width: 1300px;*/
+}
+
+.image-row {
+    max-height: 600px;
+}
+
+.image-strip {
+    width: 100%;
+}
+
 .carousel-caption {
     max-width: 100%;
     width:100%;
@@ -112,10 +124,6 @@ body {
 
 .hidden {
     display: none;
-}
-
-.image-strip {
-    width: 100%;
 }
 
 #registration {
