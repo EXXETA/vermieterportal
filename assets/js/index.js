@@ -9,13 +9,17 @@ if (document.cookie.indexOf("sessiontag=") >= 0) {
 $(document).ready(function() {
 
   // Set the price with a 50/50 chance fot both sets
-  
-  if (Math.random() >= 0.5) {
-    var price = 10;
+  rnd = Math.random();
+
+  if (rnd >= 0.33) {
+    var price = 5;
     var option = 'A';
+  } else if (rnd >= 0.66) {
+    var price = 10;
+    var option = 'B';
   } else {
     var price = 20;
-    var option = 'B';
+    var option = 'C';
   }
 
   $('.price').text(price);
@@ -45,34 +49,12 @@ $(document).ready(function() {
                                                     + '&mail=' + formData['mail']
                                                     + '&checkSupport=' + formData['checkSupport'];
 
-    // $.ajax({
-    //   type: 'POST',
-    //   url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/anmelden',
-    //   data: JSON.stringify(formData),
-    //   dataType: 'json',
-    //   crossDomain: true,
-    //   encode: true,
-    //   success: function(responseData, textStatus, jqXHR) {
-    //     console.log(responseData);
-    //     window.location.href = 'vportal-anmelden.html?option=' + option
-    //                                                 + '&price=' + price
-    //                                                 + '&vorname=' + formData['vorname']
-    //                                                 + '&name=' + formData['name']
-    //                                                 + '&mail=' + formData['mail']
-    //                                                 + '&checkSupport=' + formData['checkSupport'];
-    //   },
-    //   error: function(responseData, textStatus, errorThrown) {
-    //     console.warn(responseData, textStatus, errorThrown);
-    //     alert('CORS failed - ' + textStatus);
-    //   }
-    // });
-
   });
 
   $('#units').on('input', function(event) {
     units = $('#units').val();
     $('#units-label').text(units);
-    $('#price-estimate').text(units * price);
+    $('#price-estimate').text(units < 30 ? units * price : 30 * price + (units - 30) * price * 0.5);
   });
 
   $('#units').on('change', function(event) {

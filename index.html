@@ -49,11 +49,11 @@ layout: default
       <div class="col px-0">
         <img src="assets/images/2zu1_objektverwaltung.jpg" class="img-fluid px-0 image-strip" alt="objektverwaltung">
         <div class="carousel-caption whitened px-4">
-          <div class="row h-100 align-items-center">
-            <div class="col col-md-4 offset-md-6">
+          <div class="row h-100 align-items-center text-left">
+            <div class="col col-md-4 offset-md-4">
               <h2 class="d-none d-md-block">Automatisierte Erstellung der Nebenkostenabrechnung</h2>
               <h2 class="d-block d-md-none h-small">Automatisierte Erstellung der Nebenkostenabrechnung</h2>
-              <ul class="text-left pt-md-4 ml-4 d-none d-md-block">
+              <ul class="pt-md-4 d-none d-md-block">
                 <li>Kinderleichte Nebenkostenabrechnung</li>
                 <li>Unterstützte Kostenerfassung durch Logikprüfung der Eingaben</li>
                 <li>Übersichtlicher Kostenvergleich zum Vorjahr</li>
@@ -68,7 +68,7 @@ layout: default
       <div class="col px-0">
         <img src="assets/images/2zu1_robohand.jpg" class="img-fluid px-0 image-strip" alt="robohand">
         <div class="carousel-caption blacked px-4">
-          <div class="row h-100 align-items-center">
+          <div class="row h-100 align-items-center text-left">
             <div class="col col-md-4 offset-md-1">
               <h2 class="d-none d-md-block">Digitale und einfache Verwaltung von Mietobjekten</h2>
               <h2 class="d-block d-md-none h-small">Digitale und einfache Verwaltung von Mietobjekten</h2>
@@ -78,7 +78,7 @@ layout: default
                 <li>Übersichtliche Kontaktverwaltung aller Mieter an einem Ort </li>
               </ul>
             </div>
-            <div class="col col-md-4 offset-md-1 d-none d-md-block">
+            <div class="col col-md-4 offset-md-2">
               <h2 class="d-none d-md-block">Transparente Übersicht aller Einnahmen und Ausgaben</h2>
               <h2 class="d-block d-md-none h-small">Transparente Übersicht aller Einnahmen und Ausgaben</h2>
               <ul class="text-left pt-md-4 ml-4 d-none d-md-block">
@@ -96,11 +96,11 @@ layout: default
       <div class="col px-0">
         <img src="assets/images/2zu1_documents.jpg" class="img-fluid px-0 image-strip" alt="documents">
         <div class="carousel-caption whitened px-4">
-          <div class="row h-100 align-items-center">
-            <div class="col col-md-4 offset-md-6">
+          <div class="row h-100 align-items-center text-left">
+            <div class="col col-md-4 offset-md-4">
               <h2 class="d-none d-md-block">Sichere Archivierung aller Dokumente</h2>
               <h2 class="d-block d-md-none h-small">Sichere Archivierung aller Dokumente</h2>
-              <ul class="text-left pt-md-4 ml-4 d-none d-md-block">
+              <ul class="pt-md-4 ml-4 d-none d-md-block">
                 <li>Einfacher Upload aller Dokumente per Smartphone, Tablet oder PC</li>
                 <li>Sicherer Schutz vor Datenverlust</li>
                 <li id="testNow">Zugriff von überall mit jedem Gerät zu jeder Zeit</li>
@@ -115,14 +115,14 @@ layout: default
       <div class="col col-md-7 text-center">
         <div>
           <h2>Testen Sie jetzt Vermieterix ohne Risiko</h2>
-          <p>90 Tage Geld-zurück-Garantie</p>
+          <p>Ermitteln Sie Ihren individuellen Preis</p>
         </div>
         <div class="form-group">
           <!-- <label for="unitSlider">Wieviele Wohneinheiten möchten Sie verwalten? (0-30)</label> -->
-          <input type="range" class="custom-range" min="1" max="100" id="units">
+          <input type="range" class="custom-range" min="1" max="100" id="units" value="10">
         </div>
-        <div><span id='units-label'>25</span> Wohneinheiten</div>
-        <div><span id='price-estimate'>25</span><span id="price-text">€</span>/Jahr</div>
+        <div><span id='units-label'>10</span> Wohneinheiten</div>
+        <div><span id='price-estimate'>100</span><span id="price-text">€</span>/Jahr</div>
         <div class="price-info">(<span class="price">1</span> Euro je Einheit)</div>
       </div>
     </div>
@@ -210,8 +210,15 @@ layout: default
               <button type="button" class="btn anmelden" id="anmelden" disabled>Jetzt kostenlos registrieren</button>
             </div>
           </div>
+
+          <div class="row pt-2">
+            <div class="col text-center">
+              <span style="font-size: 85%">90 Tage Geld-zurück-Garantie</span>
+            </div>
+          </div>
         </form>
       </div>
+
     </div>
 
 
