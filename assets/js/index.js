@@ -24,6 +24,8 @@ $(document).ready(function() {
 
   $('.price').text(price);
   $('#anmelden').data('price', price);
+  $('#price-estimate').text( $('#units-label').text() * price )
+
 
   $('#anmelden').on('click', function(event) {
     gtag_report_conversion('https://vermieterix.com/vportal-anmelden.html');
