@@ -106,7 +106,7 @@ $(document).ready(function() {
   }
 
   // CHECK FORM VALIDITY
-  $('#SignUp').on('change', function(event) {
+  $('#SignUp').on('input', function(event) {
     formIsValid = all_fields_are_filled() && email_is_valid();
 
     if (formIsValid == true) {
