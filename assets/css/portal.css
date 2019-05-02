@@ -27,6 +27,14 @@ ul {
     padding-left: 20px;
 }
 
+.ul-md {
+    font-size: 150%;
+}
+
+.ul-md li {
+    line-height: 150%;
+}
+
 li {
     line-height: 110%;
     padding-top: 5pt;
