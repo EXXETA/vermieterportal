@@ -38,11 +38,6 @@ $(document).ready(function() {
       'site_id': '{{ site.version }}',
       'cookie': document.cookie
     };
-    
-    console.log(formData);
-
-    // activate spiner
-    $(this).find('.spinner-border').toggleClass('d-none')
 
     window.location.href = 'vportal-anmelden.html?option=' + option
                                               + '&price=' + price
