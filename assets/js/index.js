@@ -45,11 +45,12 @@ $(document).ready(function() {
     $(this).find('.spinner-border').toggleClass('d-none')
 
     window.location.href = 'vportal-anmelden.html?option=' + option
-                                                    + '&price=' + price
-                                                    + '&vorname=' + formData['vorname']
-                                                    + '&name=' + formData['name']
-                                                    + '&mail=' + formData['mail']
-                                                    + '&checkSupport=' + formData['checkSupport'];
+                                              + '&price=' + price
+                                              + '&units=' + $('#units').val()
+                                              + '&vorname=' + formData['vorname']
+                                              + '&name=' + formData['name']
+                                              + '&mail=' + formData['mail']
+                                              + '&checkSupport=' + formData['checkSupport'];
 
   });
 

@@ -19,6 +19,7 @@ $(document).ready(function() {
   var formData = {
     'option': url.searchParams.get('option'),
     'price': url.searchParams.get('price'),
+    'units': url.searchParams.get('units'),
     'vorname': url.searchParams.get('vorname'),
     'name': url.searchParams.get('name'),
     'mail': url.searchParams.get('mail'),
@@ -32,7 +33,7 @@ $(document).ready(function() {
   if (formDataValid(formData)) {
     $.ajax({
       type: 'POST',
-      url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/anmelden',
+      url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/dev/anmelden',
       data: JSON.stringify(formData),
       dataType: 'json',
       crossDomain: true,
