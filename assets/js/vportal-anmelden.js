@@ -33,7 +33,7 @@ $(document).ready(function() {
   if (formDataValid(formData)) {
     $.ajax({
       type: 'POST',
-      url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/dev/anmelden',
+      url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/{{site.env}}}/anmelden',
       data: JSON.stringify(formData),
       dataType: 'json',
       crossDomain: true,

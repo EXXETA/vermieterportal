@@ -73,7 +73,7 @@ $(document).ready(function() {
 
     $.ajax({
       type: 'POST',
-      url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/prod/activity',
+      url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/{{site.env}}/activity',
       data: JSON.stringify(formData),
       dataType: 'json',
       crossDomain: true,
