@@ -52,16 +52,20 @@ li {
     background: rgba(15, 28, 77, 0.85);
 }
 
-.blacked h2{
+.blacked h2 {
     color: #ffffff;
     font-weight: lighter;
 }
 
-.blacked ul{
+.blacked ul {
     color: #ffffff;
 }
 
-.h-small{
+.blacked i {
+    color: #ffffff;
+}
+
+.h-small {
     font-size: 14pt;
     font-weight: bold;
 }
