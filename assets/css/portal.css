@@ -7,8 +7,24 @@ body {
     max-width: 1500px;
 }
 
-.image-row {
-    /*max-height: 600px;*/
+.feature-row {
+    background-size: cover;
+}
+
+#robohand {
+    background-image: url('../images/2zu1_robohand_blass.jpg')
+}
+
+#objektverwaltung {
+    background-image: url('../images/2zu1_objektverwaltung_dunkel.jpg')
+}
+
+#money {
+    background-image: url('../images/2zu1_money_blass.jpg')
+}
+
+#documents {
+    background-image: url('../images/2zu1_documents_dunkel.jpg')
 }
 
 .image-strip {
@@ -23,8 +39,15 @@ body {
     background: rgba(255, 255, 255, 0.3);
 }
 
+.carousel-caption {
+    color: #152877;
+    top: 0;
+    bottom: auto;
+}
+
 ul {
     padding-left: 20px;
+    margin-bottom: 0px;
 }
 
 .ul-md {
@@ -40,35 +63,13 @@ li {
     padding-top: 5pt;
 }
 
-.whitened {
-    background: rgba(246, 246, 246, 0.85);
-}
-
-.whitened h2 {
-    font-weight: lighter;
-}
-
-.blacked {
-    background: rgba(15, 28, 77, 0.85);
-}
-
-.blacked h2 {
-    color: #ffffff;
-    font-weight: lighter;
-}
-
-.blacked ul {
-    color: #ffffff;
-}
-
-.blacked i {
-    color: #ffffff;
-}
-
+/* TODO:; Make fonts responsive*/
 .h-small {
     font-size: 14pt;
     font-weight: bold;
 }
+
+/* NAVBAR */
 
 #title {
     font-size: 140%;
@@ -77,32 +78,7 @@ li {
     text-decoration: none;
 }
 
-.carousel-caption {
-    color: #152877;
-    top: 0;
-    bottom: auto;
-}
-
-.feature-text {
-    font-size: 90%;
-    color: #606a96;
-}
-
-.fa-check-circle {
-    color: #249d3c;
-}
-
-.fa-circle {
-    color: #94979b;
-}
-
-.checked {
-    color: #000000;
-}
-
-.unchecked {
-    color: #94979b;
-}
+/* NAVBAR ENDE*/
 
 .form-control {
     border-radius: 0px;
@@ -133,22 +109,6 @@ li {
     font-size: 70%;
 }
 
-#impressum h1 {
-    padding-top: 2rem;
-}
-
-#impressum h2 {
-    padding-top: 2rem;
-}
-
-#impressum h3 {
-    padding-top: 1rem;
-}
-
-#impressum h4 {
-    padding-top: 0rem;
-}
-
 .hidden {
     display: none;
 }
@@ -170,3 +130,23 @@ li {
     color: #ffffff;
     text-decoration: none;
 }
+
+/* IMPRESSUM */
+
+#impressum h1 {
+    padding-top: 2rem;
+}
+
+#impressum h2 {
+    padding-top: 2rem;
+}
+
+#impressum h3 {
+    padding-top: 1rem;
+}
+
+#impressum h4 {
+    padding-top: 0rem;
+}
+
+/* IMPRESSUM */
