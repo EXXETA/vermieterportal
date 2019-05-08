@@ -28,8 +28,6 @@ $(document).ready(function() {
 
 
   $('#anmelden').on('click', function(event) {
-    gtag_report_conversion('https://vermieterix.com/vportal-anmelden.html');
-
     var formData = {
       'vorname': $('input[name=vorname]').val(),
       'name': $('input[name=name]').val(),

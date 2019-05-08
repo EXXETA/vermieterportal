@@ -31,9 +31,11 @@ $(document).ready(function() {
   console.log(formData);
 
   if (formDataValid(formData)) {
+    gtag_report_conversion('https://vermieterix.com/vportal-anmelden.html');
+
     $.ajax({
       type: 'POST',
-      url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/{{site.env}}}/anmelden',
+      url: 'https://j2u5rim2yl.execute-api.eu-central-1.amazonaws.com/{{site.env}}/anmelden',
       data: JSON.stringify(formData),
       dataType: 'json',
       crossDomain: true,
