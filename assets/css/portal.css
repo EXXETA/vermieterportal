@@ -27,6 +27,13 @@ body {
     background-image: url('../images/2zu1_documents_dunkel.jpg')
 }
 
+#user {
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
 .image-strip {
     width: 100%;
 }
